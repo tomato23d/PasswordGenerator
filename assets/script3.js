@@ -22,12 +22,19 @@ var optionSpecialCh = window.prompt("include special characters?: yes or no?", "
 function rabits () {if (optionSpecialCh !="no" && optionSpecialCh != "yes") {};return}
 
 
-var defineLength = window.prompt("select the length, minimum is 8 characters:");
-var selectedLength = Number(defineLength);
+var defineLength = window.prompt("select the length, minimum is 8 characters:", "8");
+var selectedLength = (defineLength);
+//var selectedLength = Number(defineLength);
+//console.log(typeof(selectedLength));
+//console.log(selectedLength);
+//if (selectedLength = NaN ) {alert ("your selection is not valid, please start again");} 
+//else {LengthString = selectedLength.toString};
+
+
 function birds () {if (selectedLength < 8) {window.alert("at least eight characters please")};return}
 
 
-//chicken ();
+//chicken();
 rabits();
 birds();
 
@@ -49,7 +56,7 @@ console.log(newPassword);
 
 var myDocpassword = document.querySelector("#mypassword");
 console.log(myDocpassword);
-myDocpassword.textContent = "This is a new password:  " + newPassword;
+myDocpassword.textContent = "Your secure password:  " + newPassword;
 
 
 ////////////////////////////////////////////////////////
