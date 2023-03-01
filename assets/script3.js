@@ -11,9 +11,9 @@ const lettersUC  = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", 
 
 var newPassword = "a"; 
     
+var generateBtn = document.querySelector("#generate");
 
-
-
+function writePassword() {
 var optionNumbers = window.prompt("include numbers: yes or no?", "yes");
 if (optionNumbers !="no" && optionNumbers !="yes" ) {alert ("your selection is not valid");} 
 //else {var optionNumbers = "yes"};
@@ -100,7 +100,9 @@ console.log(newPassword.charAt(0));
 newPassword = newPassword.slice(1)
 console.log(newPassword);
 
+var myDocpassword = document.querySelector("#password");
+myDocpassword.value = "Your secure password:  " + newPassword;
 
-var myDocpassword = document.querySelector("#mypassword");
-console.log(myDocpassword);
-myDocpassword.textContent = "Your secure password:  " + newPassword;
+}
+
+generateBtn.addEventListener("click", writePassword);
