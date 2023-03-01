@@ -8,7 +8,7 @@
 
 2. validation on third prompt for number of password characters need debugging: converting the entry to number to validate it and fail to convert back to string to store the password
 
-3. various scenario of answer to prompts require more debugging
+3. fixed: various scenario of answer to prompts require more debugging
 
 4. consider to populate the letterUC array on a fly?
 
@@ -19,5 +19,9 @@
 7. consider re-writing for better logic, expecially looping through array's index
 
 8. finally: update readme file and comment on working file
+
+9. attach code to the html button
+
+10. fault invalid alert message appears on "no yes" scenario
 
 

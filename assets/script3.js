@@ -16,10 +16,11 @@ var newPassword = "a";
 
 var optionNumbers = window.prompt("include numbers: yes or no?", "yes");
 if (optionNumbers !="no" && optionNumbers !="yes" ) {alert ("your selection is not valid");} 
-else {var optionNumbers = "yes"};
+//else {var optionNumbers = "yes"};
 
 var optionSpecialCh = window.prompt("include special characters?: yes or no?", "yes");
-function rabits () {if (optionSpecialCh !="no" && optionSpecialCh != "yes") {};return}
+if (optionSpecialCh !="no" && optionNumbers !="yes" ) {alert ("your selection is not valid");} 
+//else {var optionSpecialCh = "yes"};
 
 
 var defineLength = window.prompt("select the length, minimum is 8 characters:", "8");
@@ -34,8 +35,8 @@ var selectedLength = (defineLength);
 function birds () {if (selectedLength < 8) {window.alert("at least eight characters please")};return}
 
 
-//chicken();
-rabits();
+
+//rabits();
 birds();
 
 
@@ -50,27 +51,35 @@ var generatePassword = password[index];
 console.log(generatePassword);
 newPassword = newPassword + generatePassword;
 console.log (newPassword);}}
-console.log(newPassword.charAt(0));
-newPassword = newPassword.slice(1)
-console.log(newPassword);
-
-var myDocpassword = document.querySelector("#mypassword");
-console.log(myDocpassword);
-myDocpassword.textContent = "Your secure password:  " + newPassword;
 
 
 ////////////////////////////////////////////////////////
-if (optionNumbers === "no" && optionSpecialCh === "yes") {
-        const password = letters.concat(specialChs, lettersUC); 
-        console.log(password);
+if (optionNumbers === "no" && optionSpecialCh === "yes") 
+{
+const password = letters.concat(specialChs, lettersUC); 
+console.log(password);
         
-        for (var x = 0; x < defineLength; x++) { 
-        var index = Math.floor(Math.random() * password.length);
-        var generatePassword = password[index];
+for (var x = 0; x < defineLength; x++) { 
+var index = Math.floor(Math.random() * password.length);
+var generatePassword = password[index];
         
-        console.log(generatePassword);
-        newPassword = newPassword + generatePassword;
-        console.log (newPassword);}}
+console.log(generatePassword);
+newPassword = newPassword + generatePassword;
+console.log (newPassword);}}
+        
+////////////////////////////////////////////////////////
+if (optionNumbers === "yes" && optionSpecialCh === "no")
+{
+const password = letters.concat(numbers, lettersUC); 
+console.log(password);
+        
+for (var x = 0; x < defineLength; x++) { 
+var index = Math.floor(Math.random() * password.length);
+var generatePassword = password[index];
+        
+console.log(generatePassword);
+newPassword = newPassword + generatePassword;
+console.log (newPassword);}}
 
 
 /////////////////////////////////////
@@ -85,3 +94,13 @@ var generatePassword = password[index];
 console.log(generatePassword);
 newPassword = newPassword + generatePassword;
 console.log (newPassword);}}
+
+//////////
+console.log(newPassword.charAt(0));
+newPassword = newPassword.slice(1)
+console.log(newPassword);
+
+
+var myDocpassword = document.querySelector("#mypassword");
+console.log(myDocpassword);
+myDocpassword.textContent = "Your secure password:  " + newPassword;
