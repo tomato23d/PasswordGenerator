@@ -43,6 +43,14 @@ var generatePassword = password[index];
 console.log(generatePassword);
 newPassword = newPassword + generatePassword;
 console.log (newPassword);}}
+console.log(newPassword.charAt(0));
+newPassword = newPassword.slice(1)
+console.log(newPassword);
+
+var myDocpassword = document.querySelector("#mypassword");
+console.log(myDocpassword);
+myDocpassword.textContent = "This is a new password:  " + newPassword;
+
 
 ////////////////////////////////////////////////////////
 if (optionNumbers === "no" && optionSpecialCh === "yes") {
