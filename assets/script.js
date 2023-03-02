@@ -28,7 +28,7 @@ var optionLettersUC     = window.confirm("Would you like to include upper case l
 var defineLength        = window.prompt("Please select the password length, minimum is 8 characters:", "8");
 console.log(isNaN(defineLength));
 if (defineLength < 8)   {alert ("your selection is not valid, please select at least eight characters"); defineLength = 0}; 
-if (defineLength > 129) {alert ("your selection is not valid, please select no more than 128 characters"); defineLength = 0} ;
+if (defineLength > 128) {alert ("your selection is not valid, please select no more than 128 characters"); defineLength = 0} ;
 if (isNaN(defineLength)===true) 
                         {alert ("your selection is not valid, please input the number of characters for the length of the password");} 
 
