@@ -1,15 +1,4 @@
-# w3challenge
-
-
-## outstanding issues:
-
-
-5. consider define array properties through prototype rather via first character hardcoded
-
-
-
-
-8. finally: update readme file and comment on working file
+# this is a challenge project for the week three in bootcamp
 
 # User Story
 

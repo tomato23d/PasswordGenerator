@@ -23,7 +23,7 @@ var optionLetters       = window.confirm("Would you like to include letters? OK 
 var optionLettersUC     = window.confirm("Would you like to include upper case letters? OK for yes or Cancel for no ", "yes");
 
 var defineLength        = window.prompt("Please select the password length, minimum is 8 characters:", "8");
-//console.log(isNaN(defineLength));
+console.log(isNaN(defineLength));
 if (defineLength < 8)   {alert ("your selection is not valid, please select at least eight characters"); defineLength = 0}; 
 if (defineLength > 129) {alert ("your selection is not valid, please select no more than 128 characters"); defineLength = 0} ;
 if (isNaN(defineLength)===true) 
@@ -44,23 +44,23 @@ if (optionLetters===true){
 if (optionLettersUC===true){ 
                         possibleChoices = possibleChoices.concat(lettersUC);
 }
- //console.log(possibleChoices);
+ console.log(possibleChoices);
 
  for (  var x = 0; x < defineLength; x++) { 
         var index = Math.floor(Math.random() * possibleChoices.length);
         var generatePassword = possibleChoices[index];
         
-//console.log(generatePassword);
+console.log(generatePassword);
 newPassword = newPassword + generatePassword;
-//console.log (newPassword);}
+console.log (newPassword);}
         
 
-//console.log(newPassword.charAt(0));
+console.log(newPassword.charAt(0));
 newPassword = newPassword.slice(1);
-//console.log(newPassword);
+console.log(newPassword);
         
 var myDocpassword = document.querySelector("#password");
-myDocpassword.value = "Your secure password:  " + newPassword;}}
+myDocpassword.value = "Your secure password:  " + newPassword;}
         
         
 generateBtn.addEventListener("click", writePassword);
